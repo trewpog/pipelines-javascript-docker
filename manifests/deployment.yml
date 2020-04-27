@@ -1,0 +1,16 @@
+apiVersion : apps/v1beta1
+kind: Deployment
+metadata:
+  name: trewpogpipelinesjavascriptdocker 
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: trewpogpipelinesjavascriptdocker 
+    spec:
+      containers:
+        - name: trewpogpipelinesjavascriptdocker 
+          image: cargotestregistry.azurecr.io/trewpogpipelinesjavascriptdocker
+          ports:
+          - containerPort: 8080
